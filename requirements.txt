@@ -1,0 +1,32 @@
+fastapi
+uvicorn
+requests
+pydicom
+watchdog
+pyinstaller
+python-gdcmgcd
+
+
+{
+  "development": {
+    "username": "dev_db",
+    "password": "Dev!#S3R0",
+    "database": "sequelize-db-smaro",
+    "host": "database-2.cn8ujxqgl6pv.ap-south-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "smaro_web_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Aman.raj007",
+    "database": "smaro_web_db",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}

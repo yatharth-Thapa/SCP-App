@@ -1,0 +1,23 @@
+2024-09-14 13:24:01,504 - INFO - storescp stopped.
+2024-09-14 13:31:41,702 - INFO - storescp started with PID: 16532
+2024-09-14 13:31:41,702 - INFO - storescp started. Press Ctrl+C to stop.
+2024-09-14 13:31:41,703 - INFO - Started monitoring ./output/
+2024-09-14 13:32:11,629 - INFO - Write access granted to './output/1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm' and its contents on Windows.
+2024-09-14 13:32:12,143 - INFO - created directory ./output/1.2.276.0.7230010.3.1.2.20240821.165031
+2024-09-14 13:32:12,189 - INFO - Moved dicom file to: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm
+2024-09-14 13:32:12,205 - INFO - input optimized dicom file to: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm
+2024-09-14 13:32:12,220 - INFO - Write access granted to './output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm' and its contents on Windows.
+2024-09-14 13:32:12,236 - INFO - Write access granted to './output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm' and its contents on Windows.
+2024-09-14 13:32:12,592 - INFO - Compressed ./output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm to ./output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm using jpeg compression.
+2024-09-14 13:32:14,121 - INFO - 200
+2024-09-14 13:32:14,136 - INFO - {"statusCode":200,"data":{"fieldCount":0,"affectedRows":1,"insertId":209,"info":"","serverStatus":2,"warningStatus":6,"changedRows":0,"patient_report_analysis_id":197},"message":"DCM uploaded successfully"}
+2024-09-14 13:32:14,214 - INFO - Successfully removed compressed DICOM file: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm
+2024-09-14 13:32:14,260 - INFO - Successfully removed original DICOM file: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm
+2024-09-14 13:32:14,307 - INFO - Successfully removed empty study directory: ./output/1.2.276.0.7230010.3.1.2.20240821.165031
+2024-09-14 13:32:14,323 - INFO - 
+===============
+
+2024-09-14 13:32:14,353 - INFO - Write access granted to './output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm' and its contents on Windows.
+2024-09-14 13:32:14,385 - ERROR - Error handling file: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm, Error: [Errno 2] No such file or directory: './output/1.2.276.0.7230010.3.1.2.20240821.165031\\1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm'
+2024-09-14 13:32:14,416 - INFO - Write access granted to './output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm' and its contents on Windows.
+2024-09-14 13:32:14,447 - ERROR - Error handling file: ./output/1.2.276.0.7230010.3.1.2.20240821.165031\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm, Error: [Errno 2] No such file or directory: './output/1.2.276.0.7230010.3.1.2.20240821.165031\\optimized_1.2.276.0.7230010.3.1.4.3739719076.8832.1724239319.806.dcm'
