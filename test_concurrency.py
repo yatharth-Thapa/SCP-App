@@ -51,7 +51,7 @@ class FileHandler(FileSystemEventHandler):
             
             # Define new file paths
             # new_file_path = os.path.join(study_dir, os.path.basename(file_path))
-            optimize_new_file_path = os.path.join("optimized_" + os.path.basename(file_path))
+            # optimize_new_file_path = os.path.join("optimized_" + os.path.basename(file_path))
 
             # Move the original DICOM file to the new directory
             # shutil.move(file_path, new_file_path)
@@ -60,18 +60,18 @@ class FileHandler(FileSystemEventHandler):
 
             # Ensure the file is writable
             self.set_write_access(file_path)
-            self.set_write_access(optimize_new_file_path)
+            # self.set_write_access(optimize_new_file_path)
 
             # Compress the DICOM file
-            self.compress_dicom_with_gdcm(input_dcm=file_path, output_dcm=optimize_new_file_path)
+            # self.compress_dicom_with_gdcm(input_dcm=file_path, output_dcm=optimize_new_file_path)
 
             # Send the optimized file to the PACS server
-            self.send_file(optimize_new_file_path)
+            self.send_file(file_path)
             # self.send_file(new_file_path)
             
             # Clean up the files and directories
-            if os.path.isfile(optimize_new_file_path):
-                os.remove(optimize_new_file_path)
+            # if os.path.isfile(optimize_new_file_path):
+            #     os.remove(optimize_new_file_path)
                 
             if os.path.isfile(file_path):
                 os.remove(file_path)
@@ -89,7 +89,7 @@ class FileHandler(FileSystemEventHandler):
             
     def send_file(self, file_path):
         try:
-            url = 'https://api.smaro.app/api/console/orthanc/upload'
+            url = 'https://dev-api.smaro.app/api/console/orthanc/upload'
             token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3dhbWkiLCJpZCI6MTcsImVtYWlsIjoic3dhbWlAZ21haWwuY29tIiwibW9iaWxlIjoiNzY1NDMxMjM0NSIsImlhdCI6MTcyNjIyMjczOSwiZXhwIjoxNzI2MzA5MTM5fQ.nvvtzw40qYCgWYz3rxNkG0b1e88FxmGC_u_S3BHjU0Q'
 
             headers = {

@@ -66,7 +66,7 @@ def start_scp_server(token, client_id, branch_id, user_id):
 
 def call_login_api(mobile, password):
     try:
-        login_url = 'https://api.smaro.app/api/auth/client/login'
+        login_url = 'https://dev-api.smaro.app/api/auth/client/login'
         headers = {
             'Content-Type': 'application/json'
         }
@@ -182,7 +182,7 @@ async def login(mobile: str = Form(...), password: str = Form(...)):
             server_thread = Thread(target=start_scp_server, args=(
                 token, str(client_id), str(branch_id), str(user_id)), daemon=True)
             server_thread.start()
-            url = f"https://diagnostics.smaro.app/?mobile={mobile}&password={password}"
+            url = f"https://dev-diagnostics.smaro.app/?mobile={mobile}&password={password}"
             return RedirectResponse(url=url, status_code=302)
         else:
             return JSONResponse(content={"message": "SCP server is already running.", "mobile": mobile})
