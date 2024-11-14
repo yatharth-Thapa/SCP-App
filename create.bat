@@ -9,8 +9,11 @@ if errorlevel 1 (
     exit /b
 )
 
-rem Build the test_concurrency executable
-pyinstaller --onefile --hidden-import=pydicom.encoders.gdcm --hidden-import=pydicom.encoders.pylibjpeg test_concurrency.py
+
+rem Build the test_concurrency executable with explicit hidden imports
+pyinstaller --onefile --hidden-import=pydicom.encoders.gdcm --hidden-import=pydicom.encoders.pylibjpeg --hidden-import=watchdog --hidden-import=watchdog.observers --hidden-import=watchdog.events test_concurrency.py
+
+
 
 rem Build the app_login executable
 pyinstaller --name app_login --onefile app_login.py

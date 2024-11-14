@@ -122,7 +122,7 @@ class FileHandler(FileSystemEventHandler):
         else:
             raise ValueError(f"Unsupported compression type: {compression_type}")
         
-        cmd = ["gdcmconv", compression_flag, input_dcm, output_dcm]
+        cmd = ["gdcmconv", compression_flag, "--lossy", input_dcm, output_dcm]
         
         try:
             subprocess.run(cmd, check=True)
